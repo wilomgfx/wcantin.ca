@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby-TS-MDX-PrismJs-Starter',
-    description: 'Gatsby-TS-MDX-PrismJs-Starter',
-    keywords: 'One keyword, two keywords',
+    title: 'William Cantin',
+    description: 'Tech blog and personnal website.',
+    keywords: 'tech, blog, programming, oss, blogging, technology, code, coding, developer, development',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
