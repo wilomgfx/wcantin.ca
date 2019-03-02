@@ -1,7 +1,6 @@
-# Gatsby TypeScript MDX Prismjs starter
+# wcantin.ca
 
-Demo: <https://infallible-brown-28846b.netlify.com/>
-
+Uses [Gatsby TypeScript MDX Prismjs starter](https://www.gatsbyjs.org/starters/tylergreulich/gatsby-typescript-mdx-prismjs-starter/)
 ## Getting started
 
 Install this by running the following from your CLI:
