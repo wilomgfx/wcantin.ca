@@ -1,6 +1,7 @@
 # wcantin.ca
 
 [![CircleCI](https://circleci.com/gh/wilomgfx/wcantin.ca.svg?style=shield)](https://circleci.com/gh/wilomgfx/wcantin.ca)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f8d7e89f-a63c-4a05-bd56-eb1b7c1fcea1/deploy-status)](https://app.netlify.com/sites/wcantin/deploys)
 
 Uses [Gatsby TypeScript MDX Prismjs starter](https://www.gatsbyjs.org/starters/tylergreulich/gatsby-typescript-mdx-prismjs-starter/)
 ## Getting started
