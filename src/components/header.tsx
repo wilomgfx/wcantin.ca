@@ -1,39 +1,67 @@
 import { Link } from 'gatsby';
-import * as React from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import GatsbyLogo from '../images/gatsby-icon.png';
 
 interface HeaderProps {
   siteTitle: string;
 }
 
 const HeaderWrapper = styled.div`
-  background: ${props => props.theme.colorPrimary};
-  img {
-    margin-bottom: 0;
-  }
+  background: transparent;
 `;
 
 const HeaderContainer = styled.div`
   margin: 0 auto;
   max-width: 96rem;
   padding: 1rem;
+  word-wrap: break-word;
+  display: flex;
+  flex:1;
+  justify-content: center;
+  align-items: center;
 `;
+
+const SiteTitle = styled.h1`
+  margin: 0;
+  line-height: 0.5;
+`;
+
+const StyledLink = styled(Link)`
+  color: white;
+  text-decoration: none;
+`;
+
+const StyledTitleLink = styled(StyledLink)`
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
+const LinksContainer = styled.nav`
+  flex:1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+`
 
 const Header: React.FunctionComponent<HeaderProps> = () => (
   <HeaderWrapper>
     <HeaderContainer>
-      <h1 style={{ margin: 0 }}>
-        <Link
+      <SiteTitle>
+        <StyledLink
           to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
         >
-          <img height="100" src={GatsbyLogo} alt="Gatsby Logo" />
-        </Link>
-      </h1>
+          <p>William</p>
+          <p>Cantin</p>
+        </StyledLink>
+      </SiteTitle>
+      <LinksContainer>
+        <StyledLink to="/blog">Blog</StyledLink>
+        <StyledLink to="/projects">Projects</StyledLink>
+        <StyledLink to="/about">About</StyledLink>
+        <StyledLink to="/contact">Contact me</StyledLink>
+      </LinksContainer>
     </HeaderContainer>
   </HeaderWrapper>
 );

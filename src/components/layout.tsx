@@ -5,14 +5,8 @@ import styled, { ThemeProvider } from 'styled-components';
 import { useLayoutQuery } from '../hooks/useLayoutQuery';
 import Header from './header';
 import './layout.css';
-
-interface ThemeProps {
-  colorPrimary: string;
-}
-
-const theme: ThemeProps = {
-  colorPrimary: '#663399',
-};
+import Hero from './Hero';
+import theme from '../theme/theme';
 
 const MainLayout = styled.main`
   max-width: 90%;
@@ -41,7 +35,9 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
         >
           <html lang="en" />
         </Helmet>
-        <Header siteTitle={title} />
+        <Hero> 
+          <Header siteTitle={title} />
+        </Hero>
         <MainLayout>
           <div>{children}</div>
         </MainLayout>
