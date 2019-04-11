@@ -1,5 +1,7 @@
 # wcantin.ca
 
+[![CircleCI](https://circleci.com/gh/wilomgfx/wcantin.ca.svg?style=svg)](https://circleci.com/gh/wilomgfx/wcantin.ca)
+
 Uses [Gatsby TypeScript MDX Prismjs starter](https://www.gatsbyjs.org/starters/tylergreulich/gatsby-typescript-mdx-prismjs-starter/)
 ## Getting started
 
