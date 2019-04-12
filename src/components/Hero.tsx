@@ -58,7 +58,7 @@ const Hero: React.FunctionComponent<HeroProps> = ({theme, children}) => {
         <Portrait src={Me}></Portrait>
         <Description>
           <p>Fully commited Fullstack developer from Montreal, Canada</p>
-          <p>Graduating from my undergrad in Software engineering in summer 2020</p>
+          <p>Graduating from my undergrad in Software engineering in summer 2020!</p>
         </Description>
       </PortraitContainer>
     </Section>
