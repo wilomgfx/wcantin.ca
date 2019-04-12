@@ -58,9 +58,9 @@ const Header: React.FunctionComponent<HeaderProps> = () => (
       </SiteTitle>
       <LinksContainer>
         <StyledLink to="/blog">Blog</StyledLink>
-        <StyledLink to="/projects">Projects</StyledLink>
-        <StyledLink to="/about">About</StyledLink>
-        <StyledLink to="/contact">Contact me</StyledLink>
+        {/* <StyledLink to="/projects">Projects</StyledLink> */}
+        {/* <StyledLink to="/about">About</StyledLink> */}
+        {/* <StyledLink to="/contact">Contact me</StyledLink> */}
       </LinksContainer>
     </HeaderContainer>
   </HeaderWrapper>
