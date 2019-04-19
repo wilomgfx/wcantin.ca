@@ -28,6 +28,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
       <>
         <Helmet
           title={title}
+          //@ts-ignore
           meta={[
             { name: 'description', content: description },
             { name: 'keywords', content: keywords || 'keywords' },
