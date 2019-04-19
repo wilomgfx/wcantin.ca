@@ -1,5 +1,7 @@
 export default interface ITheme {
-  colorPrimary: string;
+  primary: {
+    color: string
+  };
   hero: {
     gradient: {
       from: string;

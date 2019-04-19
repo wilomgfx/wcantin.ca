@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import ITheme from '../theme/Itheme';
-import Me from '../images/me.jpg';
-// import MyFace from '../images/my-face.png';
 
 interface HeroProps {
   theme: ITheme;
@@ -21,23 +19,6 @@ const PortraitContainer = styled.div`
   position: absolute;
 `;
 
-const Portrait = styled.img`
-  object-fit: cover;
-  max-width: 300px;
-  height: auto;
-  margin-left: 5rem;
-  position: relative;
-  top: 70px;
-  left: 50px;
-  border-radius: 50px;
-  border-color: black;
-  border-width: 5px;
-  border-style: solid;
-  @media (max-width: 550px) {
-    left: 0;
-    top: 20px;
-  }
-`;
 
 const Description = styled.div`
   flex:1;
@@ -55,7 +36,6 @@ const Hero: React.FunctionComponent<HeroProps> = ({theme, children}) => {
     <Section theme={theme}>
       {children}
       <PortraitContainer>
-        <Portrait src={Me}></Portrait>
         <Description>
           <p>Fully commited Fullstack developer from Montreal, Canada</p>
           <p>Graduating from my undergrad in Software engineering in summer 2020</p>

@@ -1,7 +1,9 @@
 import ITheme from './ITheme';
 
 const theme: ITheme = {
-  colorPrimary: 'green',
+  primary: { 
+    color :"#008F11",
+  },
   hero: {
     gradient: {
       from: "#348F50",
