@@ -35,8 +35,8 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
         >
           <html lang="en" />
         </Helmet>
-        <Header siteTitle={title} />
-        <Hero> 
+        <Header  theme={theme}/>
+        <Hero theme={theme}> 
           
         </Hero>
         <MainLayout>
