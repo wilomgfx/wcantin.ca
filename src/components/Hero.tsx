@@ -23,12 +23,6 @@ const HeroImage = styled.div`
   box-shadow:inset 0 0 0 2000px rgba(10.2%, 13.3%, 14.5%, 50%);
 `;
 
-const OverLay = styled.div`
-  background: #1A2225;
-  z-index: 3;
-`;
-
-
 const Description = styled.div`
   flex:1;
   color: white;
