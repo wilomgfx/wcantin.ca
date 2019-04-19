@@ -1,7 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-// @ts-ignore
 import Logo from '../images/logo.svg';
 import ITheme from '../theme/Itheme';
 
