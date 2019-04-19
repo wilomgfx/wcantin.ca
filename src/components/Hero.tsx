@@ -1,22 +1,31 @@
 import React from 'react';
 import styled from 'styled-components';
 import ITheme from '../theme/Itheme';
+import HeroImg from '../images/hero-img.png';
 
 interface HeroProps {
   theme: ITheme;
 }
 
 const Section = styled.section`
-  height: 45vh;
-  background:
-    ${(props: HeroProps) => 
-      `linear-gradient(to right, ${props.theme.hero.gradient.from}, ${props.theme.hero.gradient.to})`};
-  margin-bottom: 100px;
+  height: 75vh;
+  /* width: 100%; */
 `;
 
-const PortraitContainer = styled.div`
-  display: flex;
-  position: absolute;
+const HeroImage = styled.div`
+  height: 75vh;
+  background-image: url(${HeroImg});
+  background-repeat: no-repeat;  
+  background-position: 0% 0%;
+  background-size: 100% 100%;
+  /* background-attachment: fixed; */
+  /* background-position: center;  */
+  box-shadow:inset 0 0 0 2000px rgba(10.2%, 13.3%, 14.5%, 50%);
+`;
+
+const OverLay = styled.div`
+  background: #1A2225;
+  z-index: 3;
 `;
 
 
@@ -35,12 +44,13 @@ const Hero: React.FunctionComponent<HeroProps> = ({theme, children}) => {
   return (
     <Section theme={theme}>
       {children}
-      <PortraitContainer>
-        <Description>
-          <p>Fully commited Fullstack developer from Montreal, Canada</p>
-          <p>Graduating from my undergrad in Software engineering in summer 2020</p>
-        </Description>
-      </PortraitContainer>
+        <HeroImage>
+          <Description>
+            <p>I'm Will</p>
+            <p>A Fullstack Software Developer</p>
+            <p>From Montreal, Canada</p>
+          </Description>
+        </HeroImage>
     </Section>
   )
 };
