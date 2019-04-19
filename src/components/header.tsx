@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 // @ts-ignore
 import Logo from '../images/logo.svg';
-import ITheme from 'src/theme/Itheme';
+import ITheme from '../theme/Itheme';
 
 interface HeaderProps {
   theme: ITheme;
