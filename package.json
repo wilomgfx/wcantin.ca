@@ -63,7 +63,7 @@
     "url": "https://github.com/tylergreulich/gatsby-typescript-mdx-prismjs-starter"
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "./jest.setup.js",
+    "setupFilesAfterEnv": ["./jest.setup.js"],
     "globals": {
       "__PATH_PREFIX__": ""
     },
