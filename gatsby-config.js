@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: 'William Cantin',
     description: 'Tech blog and personnal website.',
-    keywords: 'tech, blog, programming, oss, blogging, technology, code, coding, developer, development',
+    keywords:
+      'tech, blog, programming, oss, blogging, technology, code, coding, developer, development',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -14,7 +15,7 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-plugin-offline',
     {
-      resolve: `gatsby-mdx`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
         decks: [],
         defaultLayouts: {
