@@ -3,7 +3,7 @@ import * as React from 'react';
 import Helmet from 'react-helmet';
 import styled, { ThemeProvider } from 'styled-components';
 import { useLayoutQuery } from '../hooks/useLayoutQuery';
-import Header from './Header';
+import Header from './header';
 import './layout.css';
 import Hero from './Hero';
 import theme from '../theme/theme';
@@ -36,10 +36,8 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
         >
           <html lang="en" />
         </Helmet>
-        <Header  theme={theme}/>
-        <Hero theme={theme}> 
-          
-        </Hero>
+        <Header theme={theme} />
+        <Hero theme={theme}></Hero>
         <MainLayout>
           <div>{children}</div>
         </MainLayout>
