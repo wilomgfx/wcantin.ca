@@ -3,7 +3,7 @@ import * as React from 'react';
 import Helmet from 'react-helmet';
 import styled, { ThemeProvider } from 'styled-components';
 import { useLayoutQuery } from '../hooks/useLayoutQuery';
-import Header from './header';
+import Header from './Header';
 import './layout.css';
 import Hero from './Hero';
 import theme from '../theme/theme';
