@@ -9,7 +9,7 @@ interface HeaderProps {
 }
 
 const HeaderWrapper = styled.div`
-  background: ${(props: HeaderProps) => props.theme.primary.color};
+  background-color: ${(props: HeaderProps) => props.theme.secondary.color};
 `;
 
 const HeaderContainer = styled.div`
@@ -47,6 +47,7 @@ const LinksContainer = styled.nav`
 const LogoContainer = styled.nav`
   flex: 1;
   display: flex;
+  background-color: ${(props: HeaderProps) => props.theme.primary.color};
 `;
 
 const Header: React.FunctionComponent<HeaderProps> = () => (

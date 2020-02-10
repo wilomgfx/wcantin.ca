@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import ITheme from '../theme/Itheme';
-import HeroImg from '../images/hero-img.png';
 
 interface HeroProps {
   theme: ITheme;
@@ -10,21 +9,11 @@ interface HeroProps {
 const Section = styled.section`
   height: 75vh;
   /* width: 100%; */
-`;
-
-const HeroImage = styled.div`
-  height: 75vh;
-  background-image: url(${HeroImg});
-  background-repeat: no-repeat;  
-  background-position: 0% 0%;
-  background-size: 100% 100%;
-  /* background-attachment: fixed; */
-  /* background-position: center;  */
-  box-shadow:inset 0 0 0 2000px rgba(10.2%, 13.3%, 14.5%, 50%);
+  background-color: ${(props: HeroProps) => props.theme.secondary.color};
 `;
 
 const Description = styled.div`
-  flex:1;
+  flex: 1;
   color: white;
   font-weight: 500;
   display: flex;
@@ -34,19 +23,17 @@ const Description = styled.div`
   margin-left: 5rem;
 `;
 
-const Hero: React.FunctionComponent<HeroProps> = ({theme, children}) => {
+const Hero: React.FunctionComponent<HeroProps> = ({ theme, children }) => {
   return (
     <Section theme={theme}>
       {children}
-        <HeroImage>
-          <Description>
-            <p>I'm Will</p>
-            <p>A Fullstack Software Developer</p>
-            <p>From Montreal, Canada</p>
-          </Description>
-        </HeroImage>
+      <Description>
+        <p>I'm Will</p>
+        <p>A Fullstack Software Developer</p>
+        <p>From Montreal, Canada</p>
+      </Description>
     </Section>
-  )
+  );
 };
 
 export default Hero;
