@@ -33,8 +33,10 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run tests!
-      - run: npm run test:c
-       # codecov
-      - codecov/upload:
-          file: "./coverage"
+      - run: npm build
+
+      # # run tests!
+      # - run: npm run test:c
+      #  # codecov
+      # - codecov/upload:
+      #     file: "./coverage"
