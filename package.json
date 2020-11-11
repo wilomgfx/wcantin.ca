@@ -1,100 +1,22 @@
 {
-  "name": "gatsby-typescript-mdx-prismjs-starter",
-  "description": "Gatsby TS MDX Prismsjs Starter",
-  "version": "1.0.0",
-  "author": "Tyler Greulich <tgreul6@gmail.com>",
-  "dependencies": {
-    "@mdx-js/react": "^1.5.5",
-    "@testing-library/jest-dom": "^5.1.1",
-    "@testing-library/react": "^9.4.0",
-    "babel-plugin-styled-components": "^1.10.7",
-    "gatsby": "^2.19.12",
-    "gatsby-image": "^2.2.40",
-    "gatsby-mdx": "^1.0.0",
-    "gatsby-plugin-manifest": "^2.2.41",
-    "gatsby-plugin-mdx": "^1.0.70",
-    "gatsby-plugin-offline": "^3.0.34",
-    "gatsby-plugin-react-helmet": "^3.1.22",
-    "gatsby-plugin-sharp": "^2.4.5",
-    "gatsby-plugin-styled-components": "^3.1.19",
-    "gatsby-plugin-typescript": "^2.1.27",
-    "gatsby-remark-prismjs": "^3.3.31",
-    "gatsby-source-filesystem": "^2.1.48",
-    "gatsby-transformer-remark": "^2.6.50",
-    "gatsby-transformer-sharp": "^2.3.14",
-    "prismjs": "^1.19.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
-    "styled-components": "^5.0.1"
-  },
-  "keywords": [
-    "gatsby",
-    "mdx",
-    "typescript",
-    "prismjs",
-    "styled-components"
-  ],
-  "license": "MIT",
+  "name": "learn-starter",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
-    "test": "jest",
-    "test:c": "jest --coverage"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
-  "devDependencies": {
-    "@mdx-js/loader": "^1.5.5",
-    "@mdx-js/mdx": "^1.5.5",
-    "@mdx-js/tag": "^0.20.3",
-    "@types/jest": "^25.1.2",
-    "@types/react-helmet": "^5.0.15",
-    "@types/styled-components": "^4.4.2",
-    "jest": "^25.1.0",
-    "loader-utils": "^1.2.3",
-    "prettier": "^1.19.1",
-    "ts-jest": "^25.2.0",
-    "tslint": "^6.0.0",
-    "typescript": "^3.7.5"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tylergreulich/gatsby-typescript-mdx-prismjs-starter"
-  },
-  "jest": {
-    "setupFilesAfterEnv": ["./jest.setup.js"],
-    "globals": {
-      "__PATH_PREFIX__": ""
-    },
-    "testURL": "http://localhost",
-    "transform": {
-      "^.+\\.(tsx?|jsx?)$": "ts-jest"
-    },
-    "transformIgnorePatterns": [
-      "node_modules/(?!(gatsby)/)"
-    ],
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx)$",
-    "testPathIgnorePatterns": [
-      "node_modules",
-      ".cache"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
-    "moduleNameMapper": {
-      "typeface-*": "identity-obj-proxy",
-      ".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy",
-      ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/__tests__/__mocks__/file.js"
-    },
-    "collectCoverage": true,
-    "coverageDirectory": "./coverage/",
-    "coverageReporters": [
-      "lcov",
-      "text",
-      "html"
-    ]
+  "dependencies": {
+    "date-fns": "^2.16.1",
+    "gray-matter": "^4.0.2",
+    "next": "^10.0.0",
+    "postcss-flexbugs-fixes": "^5.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "remark": "^13.0.0",
+    "remark-html": "^13.0.1",
+    "tailwindcss": "^1.9.6"
   }
 }
