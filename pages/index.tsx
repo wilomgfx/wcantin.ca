@@ -1,34 +1,44 @@
 import Head from 'next/head';
-import Link from 'next/link';
-
-import Date from '../components/date';
 import Layout, { siteTitle } from '../components/layout';
-import utilStyles from '../styles/utils.module.css';
+const utilStyles = require('../styles/utils.module.css');
 import { getSortedPostsData } from '../lib/posts';
+import Link from 'next/link';
+import Date from '../components/Date';
+import { GetStaticProps } from 'next';
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
-}
-
-export default function Home({ allPostsData }) {
+export default function Home({
+  allPostsData,
+}: {
+  allPostsData: {
+    date: string;
+    title: string;
+    id: string;
+  }[];
+}) {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-2X6J4JJ7HN"
+        />
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-2X6J4JJ7HN');
+        `,
+          }}
+        />
       </Head>
       <section className={utilStyles.headingMd}>
         <p>
           Fully committed Fullstack developer. I love to learn new things and to
-          develop solutions that help others do more!{' '}
-        </p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+          develop solutions that help others do more!
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
@@ -50,3 +60,12 @@ export default function Home({ allPostsData }) {
     </Layout>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+};
