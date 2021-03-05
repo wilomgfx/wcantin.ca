@@ -19,12 +19,12 @@ export default function Header({}: Props): ReactElement {
         w="100%"
         mb={8}
         p={8}
-        bg={['primary.500', 'primary.500', 'transparent', 'transparent']}
-        color={['gray', 'gray', 'primary.700', 'primary.700']}
+        bg={['primary.500', 'primary.500', 'black', 'black']}
+        color={['green', 'green', 'primary.700', 'primary.700']}
       >
         <Logo
           w="100px"
-          color={['gray', 'gray', 'primary.500', 'primary.500']}
+          color={['green', 'green', 'primary.500', 'primary.500']}
         />
         <MenuToggle toggle={toggle} isOpen={isOpen} />
         <MenuLinks isOpen={isOpen} />
