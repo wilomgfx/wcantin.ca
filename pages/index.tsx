@@ -6,6 +6,7 @@ import Link from "next/link";
 import Date from "../components/date";
 import { GetStaticProps } from "next";
 
+const headingText = "Hi I'm William 👋🏻";
 export default function Home({
   allPostsData,
 }: {
@@ -21,7 +22,7 @@ export default function Home({
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>Hi I'm William 👋🏻</p>
+        <p>{headingText}</p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
