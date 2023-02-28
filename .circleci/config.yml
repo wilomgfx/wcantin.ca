@@ -5,38 +5,22 @@
 version: 2.1
 orbs:
   codecov: codecov/codecov@1.0.4
+  node: circleci/node@5.0.2
 jobs:
-  build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:13.8.0
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
-    working_directory: ~/repo/website
+  build_and_test: # this can be any name you choose
+    working_directory: ~/project/website
+    executor: node/default # use the default executor defined within the orb
     steps:
       - checkout
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-
-      - run: npm install
-
-      - save_cache:
+      - node/install-packages:
+          pkg-manager: npm
+      - run:
+          command: npm run test
+          name: Run tests
+      - run:
+          command: npm run build
+          name: Build app
+      - persist_to_workspace:
+          root: ~/project
           paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
-      - run: npm run build
-
-      # # run tests!
-      # - run: npm run test:c
-      #  # codecov
-      # - codecov/upload:
-      #     file: "./coverage"
+            - .
