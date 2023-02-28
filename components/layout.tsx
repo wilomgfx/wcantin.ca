@@ -1,18 +1,18 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
-import Link from 'next/link'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "./layout.module.css";
+import utilStyles from "../styles/utils.module.css";
+import Link from "next/link";
 
-const name = 'William Cantin'
-export const siteTitle = 'William Cantin\'s website'
+const name = "William Cantin";
+export const siteTitle = "William Cantin's website";
 
 export default function Layout({
   children,
-  home
+  home,
 }: {
-  children: React.ReactNode
-  home?: boolean
+  children: React.ReactNode;
+  home?: boolean;
 }) {
   return (
     <div className={styles.container}>
@@ -71,5 +71,5 @@ export default function Layout({
         </div>
       )}
     </div>
-  )
+  );
 }
