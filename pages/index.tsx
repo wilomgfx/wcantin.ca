@@ -20,7 +20,7 @@ export default function Home({
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd} role="heading">
+      <section className={utilStyles.headingMd}>
         <p>Hi I'm William 👋🏻</p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>

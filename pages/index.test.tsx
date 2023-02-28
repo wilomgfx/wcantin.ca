@@ -6,9 +6,7 @@ describe('Home', () => {
   it('renders a heading', () => {
     render(<Home allPostsData={[{date: "2023-02-02", id:"id", title: "test"}]} />)
 
-    const heading = screen.getByRole('heading', {
-      name: /Hi I'm William 👋🏻/i,
-    })
+    const heading = screen.getByText(/Hi I'm William 👋🏻/i)
 
     expect(heading).toBeInTheDocument()
   })
