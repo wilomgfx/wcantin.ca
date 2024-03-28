@@ -10,11 +10,16 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/check": "^0.5.10",
     "@astrojs/mdx": "^2.2.1",
+    "@astrojs/react": "^3.1.0",
     "@astrojs/rss": "^4.0.5",
     "@astrojs/sitemap": "^3.1.1",
+    "@types/react": "^18.2.69",
+    "@types/react-dom": "^18.2.22",
     "astro": "^4.5.9",
-    "@astrojs/check": "^0.5.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "typescript": "^5.4.3"
   }
 }
